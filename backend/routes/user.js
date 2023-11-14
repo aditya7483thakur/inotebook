@@ -44,7 +44,7 @@ router.post('/createuser', [
 })
 
 router.post('/login', [
-    body('email', 'Login with correct credetials').isEmail(),
+    body('email', 'Login with correct credentials').isEmail(),
     body('password', 'Login with correct credetials').isLength({ min: 5 }),
 ], async (req, res) => {
     const errors = validationResult(req);
